@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/iws_logo.png" type="image/png">
+    <title>dave.malaran WebTest</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+    @keyframes scroll {
+        from { transform: translateX(100%); }
+        to { transform: translateX(-100%); }
+    }
+
+    .animate-scroll {
+        animation: scroll 15s linear infinite;
+    }
+    
+    .cursor {
+        animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+    </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-auto">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white backdrop-blur-md z-50 border-b border-gray-200 shadow-lg">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <img src="./assets/iws_logo.png" alt="IWS Logo" class="w-12 h-12 rounded-full">
+                    <p class="hidden md:block text-xl font-bold" id="logo-text"><span class="text-blue-600">Infinity</span> Web Solutions</p>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8 text-gray-600">
+                    <a href="#home" class="nav-link hover:text-blue-600 transition-colors duration-300">Home</a>
+                    <a href="#about" class="nav-link hover:text-blue-600 transition-colors duration-300">About Us</a>
+                    <a href="#abousst" class="nav-link hover:text-blue-600 transition-colors duration-300">Our Services</a>
+                    <a href="#skills" class="nav-link hover:text-blue-600 transition-colors duration-300">Plans and Pricing</a>
+                    <a href="#contact" class="nav-link hover:text-blue-600 transition-colors duration-300">Contact</a>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-2 text-sm text-gray-400">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300">Get Quote</button>
+                </div>
+
+                <!-- Mobile Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-3xl hover:text-blue-400 transition-colors duration-300">☰</button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t border-gray-800 pt-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="#home" class="px-4 py-3 rounded-lg text-gray-300">Home</a>
+                    <a href="#awards" class="px-4 py-3 rounded-lg text-gray-300">Awards</a>
+                    <a href="#about" class="px-4 py-3 rounded-lg text-gray-300">About</a>
+                    <a href="#skills" class="px-4 py-3 rounded-lg text-gray-300">Skills</a>
+                    <a href="#projects" class="px-4 py-3 rounded-lg text-gray-300">Projects</a>
+                    <a href="#contact" class="px-4 py-3 rounded-lg text-gray-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen overflow-hidden">
+
+        <!-- Background -->
+        <div class="absolute inset-0">
+            <img src="assets/hero_bg.png"
+                 alt="Hero Background"
+                 class="w-full h-full object-cover">
+
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black/70"></div>
+
+            <!-- Blue Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-950/70 via-black/60 to-black/80"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 min-h-screen flex items-center mt-10">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center w-full">
+
+                <!-- Left Side -->
+                <div>
+
+                    <!-- Badge -->
+                    <span
+                        class="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 border border-blue-400/30 backdrop-blur text-blue-300 text-sm font-medium">
+                        <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                        Full-Service Digital Marketing Agency
+                    </span>
+
+                    <!-- Heading -->
+                    <h1
+                        class="mt-8 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
+                        Let's get your brand  
+                        <span
+                            class="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
+                            performing
+                        </span>
+                        beyond expectations.
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="mt-8 text-lg text-gray-300 max-w-xl leading-relaxed">
+                        A full-service digital agency helping small and medium companies compete online — locally and internationally.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="mt-10 flex flex-wrap gap-5">
+
+                        <a href="#services"
+                            class="px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white font-semibold shadow-lg shadow-blue-600/30">
+                            Explore Services
+                        </a>
+
+                        <a href="#pricing"
+                            class="px-8 py-4 rounded-xl border border-white/20 bg-white/10 backdrop-blur hover:bg-white/20 transition text-white font-semibold">
+                            View Pricing
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Side -->
+                <div class="flex justify-center">
+
+                    <div class="relative">
+
+                        <!-- Glow -->
+                        <div
+                            class="absolute -inset-10 bg-blue-500/30 blur-[90px] rounded-full">
+                        </div>
+
+                        <!-- Glass Card -->
+                        <div
+                            class="relative rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-4 shadow-2xl">
+
+                            <img src="assets/iws_headoffice.jpg"
+                                alt="Digital Marketing"
+                                class="rounded-2xl w-full max-w-lg">
+
+                        </div>
+
+                        <!-- Floating Card -->
+                        <div
+                            class="absolute -bottom-8 -left-8 bg-slate-900/80 backdrop-blur-xl border border-white/10 rounded-2xl px-6 py-4 shadow-xl">
+
+                            <p class="text-blue-400 font-bold text-lg">
+                                ★ Trusted Agency
+                            </p>
+
+                            <p class="text-gray-300 text-sm">
+                                Helping businesses grow since 2010
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Fade -->
+        <div
+            class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950 to-transparent">
+        </div>
+
+    </section>
+    
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left -->
+                <div>
+                    <img src="assets/Homepage.png"
+                         alt="About Us"
+                         class="w-full rounded-xl shadow-lg object-cover">
+                </div>
+
+                <!-- Right -->
+                <div>
+
+                    <p class="text-blue-600 font-semibold uppercase tracking-wider mb-3">
+                        About Us
+                    </p>
+
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                        A team of experienced digital virtual assistants.
+                    </h2>
+
+                    <p class="text-gray-600 leading-8 mb-6">
+                        <strong>Infinity Web Solutions</strong> is a full-service digital marketing agency
+                        based in Los Angeles, offering one of the most comprehensive suites
+                        of services online today. We help you focus on your business while
+                        we take care of the digital-marketing industry.
+                    </p>
+
+                    <p class="text-gray-600 leading-8 mb-8">
+                        From strategy to execution and down to maintenance, we're here to
+                        deliver exceptional results the lean means and prices with the most
+                        cost-effective solutions.
+                    </p>
+
+                    <a href="#"
+                       class="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition">
+                        See how we work
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section id="our-services" class="py-24 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <!-- Section Heading -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-blue-600 font-semibold uppercase tracking-wider mb-3">
+                    Our Services
+                </p>
+
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                    Everything your brand needs, <br>under one roof.
+                </h2>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+                <!-- SEO -->
+                <div class="service-card group relative overflow-hidden bg-white rounded-2xl border border-gray-200 p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 opacity-0 translate-y-8">
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-white opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center shadow-lg mb-6 group-hover:rotate-6 group-hover:scale-110 transition duration-500">
+                            <i class="bx bx-line-chart text-4xl text-blue-600"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">Search Engine Optimization</h3>
+
+                        <p class="text-gray-600 leading-7 mb-8">
+                            Put your business on the first page of leading search engines with the help of our proven and tested SEO strategies that evolve through time and trends.
+                        </p>
+
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            Learn more
+                            <i class="bx bx-right-arrow-alt text-xl"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- SEM -->
+                <div class="service-card group relative overflow-hidden bg-white rounded-2xl border border-gray-200 p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 opacity-0 translate-y-8">
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-white opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center shadow-lg mb-6 group-hover:rotate-6 group-hover:scale-110 transition duration-500">
+                            <i class="bx bx-search-alt text-4xl text-blue-600"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">Search Engine Marketing</h3>
+
+                        <p class="text-gray-600 leading-7 mb-8">
+                            Achieve higher rankings and extended reach via search engine marketing campaigns that are specifically engineered for your brand’s success.
+                        </p>
+
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            Learn more
+                            <i class="bx bx-right-arrow-alt text-xl"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Social Media -->
+                <div class="service-card group relative overflow-hidden bg-white rounded-2xl border border-gray-200 p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 opacity-0 translate-y-8">
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-white opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center shadow-lg mb-6 group-hover:rotate-6 group-hover:scale-110 transition duration-500">
+                            <i class="bx bx-share-alt text-4xl text-blue-600"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">Social Media Marketing</h3>
+
+                        <p class="text-gray-600 leading-7 mb-8">
+                            Expand your reach without spending thousands of dollars by taking advantage of social media platforms!
+                        </p>
+
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            Learn more
+                            <i class="bx bx-right-arrow-alt text-xl"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Email -->
+                <div class="service-card group relative overflow-hidden bg-white rounded-2xl border border-gray-200 p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 opacity-0 translate-y-8">
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-white opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center shadow-lg mb-6 group-hover:rotate-6 group-hover:scale-110 transition duration-500">
+                            <i class="bx bx-envelope text-4xl text-blue-600"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">Email Marketing</h3>
+
+                        <p class="text-gray-600 leading-7 mb-8">
+                            Connect with a massive pool of audience wherever you are. Well-crafted and personalized emails with all the right content can do wonders.
+                        </p>
+
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            Learn more
+                            <i class="bx bx-right-arrow-alt text-xl"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Content -->
+                <div class="service-card group relative overflow-hidden bg-white rounded-2xl border border-gray-200 p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 opacity-0 translate-y-8">
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-white opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center shadow-lg mb-6 group-hover:rotate-6 group-hover:scale-110 transition duration-500">
+                            <i class="bx bx-edit-alt text-4xl text-blue-600"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">Content Writing</h3>
+
+                        <p class="text-gray-600 leading-7 mb-8">
+                            Be an authority in your chosen niche by providing your audience with unique, valuable and target-driven content at all times.
+                        </p>
+
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            Learn more
+                            <i class="bx bx-right-arrow-alt text-xl"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Video -->
+                <div class="service-card group relative overflow-hidden bg-white rounded-2xl border border-gray-200 p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 opacity-0 translate-y-8">
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-white opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center shadow-lg mb-6 group-hover:rotate-6 group-hover:scale-110 transition duration-500">
+                            <i class="bx bx-video text-4xl text-blue-600"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">Video Creation & Marketing</h3>
+
+                        <p class="text-gray-600 leading-7 mb-8">
+                            Let our video marketing experts set your online marketing campaign on fire that will convert your viewers into long-term customers.
+                        </p>
+
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            Learn more
+                            <i class="bx bx-right-arrow-alt text-xl"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                 <!-- Customer Support -->
+                <div class="service-card group relative overflow-hidden bg-white rounded-2xl border border-gray-200 p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 opacity-0 translate-y-8">
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-white opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center shadow-lg mb-6 group-hover:rotate-6 group-hover:scale-110 transition duration-500">
+                            <i class="bx bx-headphone text-4xl text-blue-600"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">Customer Service & Support</h3>
+
+                        <p class="text-gray-600 leading-7 mb-8">
+                            Give your target audience a kind of experience that would immediately make them your long-term and loyal customers.
+                        </p>
+
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            Learn more
+                            <i class="bx bx-right-arrow-alt text-xl"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Virtual Assistance -->
+                <div class="service-card group relative overflow-hidden bg-white rounded-2xl border border-gray-200 p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 opacity-0 translate-y-8">
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-white opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center shadow-lg mb-6 group-hover:rotate-6 group-hover:scale-110 transition duration-500">
+                            <i class="bx bx-user-check text-4xl text-blue-600"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">Virtual Assistance</h3>
+
+                        <p class="text-gray-600 leading-7 mb-8">
+                            Strike the balance between your personal and professional career. Our experts will get the job done even while you sleep.
+                        </p>
+
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            Learn more
+                            <i class="bx bx-right-arrow-alt text-xl"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Outsourcing -->
+                <div class="service-card group relative overflow-hidden bg-white rounded-2xl border border-gray-200 p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 opacity-0 translate-y-8">
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-white opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center shadow-lg mb-6 group-hover:rotate-6 group-hover:scale-110 transition duration-500">
+                            <i class="bx bx-network-chart text-4xl text-blue-600"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">Outsourcing & White Label</h3>
+
+                        <p class="text-gray-600 leading-7 mb-8">
+                            Make sure you don’t miss any deadline or client inquiries. We will organize your plate so you can take on new customers without hassles.
+                        </p>
+
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            Learn more
+                            <i class="bx bx-right-arrow-alt text-xl"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Web Development -->
+                <div class="service-card group relative overflow-hidden bg-white rounded-2xl border border-gray-200 p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 opacity-0 translate-y-8">
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-white opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center shadow-lg mb-6 group-hover:rotate-6 group-hover:scale-110 transition duration-500">
+                            <i class="bx bx-code-alt text-4xl text-blue-600"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">Web Development & Design</h3>
+
+                        <p class="text-gray-600 leading-7 mb-8">
+                            Create a compelling site and online channel that could serve as your customers’ haven whenever they are in need of anything.
+                        </p>
+
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            Learn more
+                            <i class="bx bx-right-arrow-alt text-xl"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Graphic Design -->
+                <div class="service-card group relative overflow-hidden bg-white rounded-2xl border border-gray-200 p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 opacity-0 translate-y-8">
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-white opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center shadow-lg mb-6 group-hover:rotate-6 group-hover:scale-110 transition duration-500">
+                            <i class="bx bx-palette text-4xl text-blue-600"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">Graphic Design</h3>
+
+                        <p class="text-gray-600 leading-7 mb-8">
+                            Grab everyone’s attention in less than a second with a compelling business logo and well-designed website that represent your brand.
+                        </p>
+
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            Learn more
+                            <i class="bx bx-right-arrow-alt text-xl"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Ecommerce -->
+                <div class="service-card group relative overflow-hidden bg-white rounded-2xl border border-gray-200 p-8 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 opacity-0 translate-y-8">
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-white opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center shadow-lg mb-6 group-hover:rotate-6 group-hover:scale-110 transition duration-500">
+                            <i class="bx bx-cart-alt text-4xl text-blue-600"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">Ecommerce Development</h3>
+
+                        <p class="text-gray-600 leading-7 mb-8">
+                            Never let order complaints drag your business down. Let our VAs handle them timely and professionally!
+                        </p>
+
+                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            Learn more
+                            <i class="bx bx-right-arrow-alt text-xl"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <div class="relative overflow-hidden rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 px-8 py-12 lg:px-16 lg:py-14">
+
+                <!-- Background Decorations -->
+                <div class="absolute -top-16 -right-16 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-20 -left-20 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl"></div>
+
+                <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
+
+                    <!-- Left Content -->
+                    <div class="text-center lg:text-left">
+
+                        <span class="inline-block px-4 py-2 mb-5 rounded-full bg-white/20 text-white text-sm font-semibold uppercase tracking-wider">
+                            Affordable Plans
+                        </span>
+
+                        <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">
+                            Starting at
+                            <span class="text-yellow-300">$60 / week.</span>
+                        </h2>
+
+                        <p class="text-blue-100 text-lg max-w-2xl">
+                            The start of a great and long-lasting relationship.
+                        </p>
+
+                    </div>
+
+                    <!-- Right Button -->
+                    <div>
+
+                        <a href="#pricing"
+                            class="inline-flex items-center gap-3 px-8 py-4 bg-white text-blue-700 font-semibold rounded-xl shadow-lg hover:bg-gray-100 hover:scale-105 transition-all duration-300">
+
+                            Check Plans
+
+                            <i class="bx bx-right-arrow-alt text-2xl"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-24 bg-slate-50">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <!-- Heading -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+
+                <p class="text-blue-600 font-semibold uppercase tracking-[0.25em] mb-4">
+                    Plans & Pricing
+                </p>
+
+                <h2 class="text-5xl font-bold text-slate-900 leading-tight">
+                    Simple pricing, serious results.
+                </h2>
+
+                <p class="mt-5 text-lg text-gray-500">
+                    Pick a plan that fits — upgrade any time as you scale.
+                </p>
+
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+
+                <!-- Starter -->
+                <div class="group bg-white rounded-3xl border border-slate-200 shadow-lg hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 p-8">
+
+                    <p class="uppercase tracking-widest text-blue-600 font-semibold text-sm mb-5">
+                        Starter
+                    </p>
+
+                    <div class="flex flex-col items-start space-y-1 mb-8">
+        
+                        <div class="flex items-end gap-2">
+                            <span class="text-6xl font-extrabold text-slate-900 tracking-tight">
+                                $60
+                            </span>
+                            <span class="text-gray-500 text-2xl mb-2 font-medium">
+                                /wk
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm text-gray-500">
+                                $228 per month
+                            </span>
+
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">
+                                Save ~5%
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <ul class="space-y-4 text-gray-600 mb-10">
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-blue-500 text-xl"></i>
+                            4 hours / week
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-blue-500 text-xl"></i>
+                            1 channel
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-blue-500 text-xl"></i>
+                            Monthly report
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-blue-500 text-xl"></i>
+                            Email support
+                        </li>
+                    </ul>
+
+                    <button class="w-full py-4 rounded-full bg-sky-500 hover:bg-sky-600 text-white font-semibold transition">
+                        Get started
+                    </button>
+
+                </div>
+
+                <!-- Basic -->
+                <div class="group bg-white rounded-3xl border border-slate-200 shadow-lg hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 p-8">
+
+                    <p class="uppercase tracking-widest text-blue-600 font-semibold text-sm mb-5">
+                        Basic
+                    </p>
+
+                    <div class="flex flex-col items-start space-y-1 mb-8">
+        
+                        <div class="flex items-end gap-2">
+                            <span class="text-6xl font-extrabold text-slate-900 tracking-tight">
+                                $100
+                            </span>
+                            <span class="text-gray-500 text-2xl mb-2 font-medium">
+                                /wk
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm text-gray-500">
+                                $338 per month
+                            </span>
+
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">
+                                Save ~5%
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <ul class="space-y-4 text-gray-600 mb-10">
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-blue-500 text-xl"></i>
+                            10 hours / week
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-blue-500 text-xl"></i>
+                            2 channels
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-blue-500 text-xl"></i>
+                            Bi-weekly reports
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-blue-500 text-xl"></i>
+                            Priority email
+                        </li>
+                    </ul>
+
+                    <button class="w-full py-4 rounded-full bg-sky-500 hover:bg-sky-600 text-white font-semibold transition">
+                        Get started
+                    </button>
+
+                </div>
+
+                <!-- Standard -->
+                <div class="relative group rounded-3xl bg-gradient-to-br from-blue-950 to-blue-800 text-white shadow-2xl hover:-translate-y-3 transition-all duration-500 p-8">
+
+                    <span class="absolute left-1/2 -translate-x-1/2 -top-4 px-6 py-2 rounded-full bg-sky-500 text-sm font-semibold shadow-lg">
+                        Most Popular
+                    </span>
+
+                    <p class="uppercase tracking-widest text-sky-300 font-semibold text-sm mb-5">
+                        Standard
+                    </p>
+
+                    <div class="flex flex-col items-start space-y-1 mb-8">
+        
+                        <div class="flex items-end gap-2">
+                            <span class="text-6xl font-extrabold text-sky-400 tracking-tight">
+                                $135
+                            </span>
+                            <span class="text-sky-300 text-2xl mb-2 font-medium">
+                                /wk
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm text-sky-300">
+                                $528 per month
+                            </span>
+
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">
+                                Save ~5%
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <ul class="space-y-4 text-blue-100 mb-10">
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-sky-400 text-xl"></i>
+                            20 hours / week
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-sky-400 text-xl"></i>
+                            4 channels
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-sky-400 text-xl"></i>
+                            Weekly reports
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-sky-400 text-xl"></i>
+                            Dedicated manager
+                        </li>
+                    </ul>
+
+                    <button class="w-full py-4 rounded-full bg-white text-slate-900 hover:bg-slate-100 font-semibold transition">
+                        Get started
+                    </button>
+
+                </div>
+
+                <!-- Business -->
+                <div class="group bg-white rounded-3xl border border-slate-200 shadow-lg hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 p-8">
+
+                    <p class="uppercase tracking-widest text-blue-600 font-semibold text-sm mb-5">
+                        Business
+                    </p>
+
+                    <div class="flex flex-col items-start space-y-1 mb-8">
+        
+                        <div class="flex items-end gap-2">
+                            <span class="text-6xl font-extrabold text-slate-900 tracking-tight">
+                                $160
+                            </span>
+                            <span class="text-gray-500 text-2xl mb-2 font-medium">
+                                /wk
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm text-gray-500">
+                                $628 per month
+                            </span>
+
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">
+                                Save ~5%
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <ul class="space-y-4 text-gray-600 mb-10">
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-blue-500 text-xl"></i>
+                            40 hours / week
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-blue-500 text-xl"></i>
+                            All channels
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-blue-500 text-xl"></i>
+                            Weekly strategy calls
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i class="bx bx-check text-blue-500 text-xl"></i>
+                            24/7 support
+                        </li>
+                    </ul>
+
+                    <button class="w-full py-4 rounded-full bg-sky-500 hover:bg-sky-600 text-white font-semibold transition">
+                        Get started
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+    <!-- Want to know more-->
+    <section class="py-20 bg-gradient-to-b from-white via-slate-50 to-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900">
+                    Want to Know More About Us?
+                </h2>
+
+                <div class="w-24 h-1 bg-blue-600 rounded-full mx-auto mt-5"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+                <!-- Video -->
+                <div
+                    class="relative rounded-3xl overflow-hidden shadow-2xl group transition duration-500 hover:-translate-y-2 hover:shadow-blue-200">
+
+                    <div class="aspect-video">
+
+                        <!-- Replace with your YouTube link -->
+                        <iframe
+                            class="w-full h-full"
+                            src="https://www.youtube.com/embed/KsVeEmnFnL4"
+                            title="Infinity Web Solutions"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <!-- Decorative Border -->
+                    <div class="absolute inset-0 border border-blue-100 rounded-3xl pointer-events-none"></div>
+
+                </div>
+
+                <!-- Text -->
+                <div>
+                    <p><span class="text-blue-600 font-bold">Infinity Web Solutions</span> shelters intelligent, passionate, creative, and customer-driven virtual assistants. Our hearts and minds are dedicated to making a big difference in our clients’ lives. We have more than a decade of combined experience in digital marketing and virtual assistance, which allows us to bring out the best in everything that we do. Rest assured that the services and commitment that you’ll get are always beyond what you expect from us, and our pool of satisfied clients can attest to it.</p>
+
+                    <!-- Button -->
+                    <div class="mt-10">
+
+                        <a href="#"
+                            class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition duration-300 shadow-lg hover:shadow-blue-300">
+
+                            Story About Us
+
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-5 h-5 transition group-hover:translate-x-1"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor">
+
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"/>
+
+                            </svg>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="fixed bottom-6 right-6 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-xl hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center z-50">
+        <i class="fas fa-arrow-up text-lg"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-[#1d1d1d] text-gray-300">
+
+    <!-- Main Footer -->
+    <div class="max-w-7xl mx-auto px-6 py-16">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            <!-- Contact -->
+            <div>
+
+                <h3 class="text-white font-bold uppercase tracking-wide mb-6">
+                    Connect With Us
+                </h3>
+
+                <ul class="space-y-4">
+
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-location-dot text-sky-400 mt-1"></i>
+                        <span>San Jose, Batangas</span>
+                    </li>
+
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-phone text-sky-400"></i>
+                        <a href="tel:+63953725918" class="hover:text-sky-400 transition">
+                            +63 915 372 5918
+                        </a>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <i class="far fa-envelope text-sky-400 mt-1"></i>
+                        <a href="mailto:info@infinity-web-solutions.com"
+                            class="hover:text-sky-400 transition break-all">
+                            info@infinity-web-solutions.com
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- Logo -->
+                <div class="mt-10">
+
+                    <img src="assets/iws_logo.png"
+                        alt="Infinity Web Solutions"
+                        class="w-56">
+
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+
+                <h3 class="text-white font-bold uppercase tracking-wide mb-6">
+                    Quick Links
+                </h3>
+
+                <ul class="space-y-3">
+
+                    <li><a href="#" class="hover:text-sky-400 transition">About Us</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Blog</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Contact</a></li>
+
+                    <li class="flex items-center gap-2">
+
+                        <a href="#" class="hover:text-sky-400 transition">
+                            Careers
+                        </a>
+
+                        <span class="bg-sky-500 text-white text-xs px-2 py-1 rounded-md font-semibold">
+                            We're Hiring!
+                        </span>
+
+                    </li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Our Team Events</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Plans & Pricing</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Testimonials</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Services -->
+            <div>
+
+                <h3 class="text-white font-bold uppercase tracking-wide mb-6">
+                    Our Services
+                </h3>
+
+                <ul class="space-y-3">
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Search Engine Optimization</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Search Engine Marketing</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Social Media Marketing</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Email Marketing</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Content Writing</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Video Creation & Marketing</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Customer Service & Support</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Virtual Assistance</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Outsourcing – White Label</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Web Development & Design</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">Graphic Design</a></li>
+
+                    <li><a href="#" class="hover:text-sky-400 transition">E-Commerce Development</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Career -->
+            <div>
+
+                <h3 class="text-white font-bold uppercase tracking-wide mb-6">
+                    Start Your Infinity Career
+                </h3>
+
+                <p class="leading-8 text-gray-400">
+
+                    We live in the pursuit of bringing happiness through meaningful
+                    work. Join our growing family and build a rewarding career with
+                    Infinity Web Solutions.
+
+                </p>
+
+                <p class="mt-6 italic text-white">
+                    Let's work together!
+                </p>
+
+                <a href="#"
+                    class="inline-flex items-center gap-2 mt-5 bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300 shadow-lg hover:shadow-sky-500/30">
+
+                    We're Hiring
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="border-t border-gray-700">
+
+        <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-5">
+
+            <!-- Social -->
+            <div class="flex items-center gap-6">
+
+                <a href="#" class="text-xl hover:text-sky-400 transition">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#" class="text-xl hover:text-sky-400 transition">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+
+                <a href="#" class="text-xl hover:text-sky-400 transition">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+
+                <a href="#" class="text-xl hover:text-sky-400 transition">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-sm tracking-[3px] uppercase text-gray-500 text-center">
+
+                Designed and Developed by <a href="https://davemalaran.vercel.app" target="_blank" class="text-white font-semibold">Dave Malaran</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+    
+    <script src="./scripts/mobileView.js"></script>
+    <script src="./scripts/scrollbar.js"></script>
+    <script> 
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            scrollTopBtn.classList.add("opacity-0", "pointer-events-none", "translate-y-4");
+            scrollTopBtn.classList.remove("opacity-100");
+        });
+        
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.remove("opacity-0", "pointer-events-none", "translate-y-4");
+                scrollTopBtn.classList.add("opacity-100");
+            } else {
+                scrollTopBtn.classList.add("opacity-0", "pointer-events-none", "translate-y-4");
+                scrollTopBtn.classList.remove("opacity-100");
+            }
+        });
+        
+        const cards = document.querySelectorAll('.service-card');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.remove('opacity-0', 'translate-y-8');
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                    }, index * 120);
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        cards.forEach(card => observer.observe(card));
+    </script>
+</html>
